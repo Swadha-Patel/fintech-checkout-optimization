@@ -1,0 +1,40 @@
+{
+  "checkout": [
+    {
+      "device": "Mobile",
+      "variant": "Control",
+      "starts": 2000,
+      "details": 1520,
+      "submitted": 1240,
+      "paid": 1100,
+      "refunded": 33
+    },
+    {
+      "device": "Mobile",
+      "variant": "Guest-first",
+      "starts": 2000,
+      "details": 1680,
+      "submitted": 1360,
+      "paid": 1210,
+      "refunded": 38
+    },
+    {
+      "device": "Desktop",
+      "variant": "Control",
+      "starts": 1000,
+      "details": 850,
+      "submitted": 760,
+      "paid": 690,
+      "refunded": 14
+    },
+    {
+      "device": "Desktop",
+      "variant": "Guest-first",
+      "starts": 1000,
+      "details": 870,
+      "submitted": 785,
+      "paid": 710,
+      "refunded": 16
+    }
+  ]
+}

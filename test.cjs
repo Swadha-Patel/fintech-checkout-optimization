@@ -1,0 +1,3 @@
+const assert=require('node:assert/strict');const m=require('./dashboard-math.js');const d=require('./dashboard-data.json');const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8);
+const c=m.compare(d.checkout);near(c.a.starts,3000);near(c.b.starts,3000);near(c.diff,130/3000);assert.ok(c.low>0);assert.ok(m.compare(d.checkout.filter(r=>r.device==='Desktop')).low<0);assert.ok(m.compare(d.checkout.filter(r=>r.device==='Mobile')).low>0);near(c.relative,c.diff/c.p0);near(c.abandonmentReduction,c.diff/(1-c.p0));for(const r of d.checkout)assert.ok(r.starts>=r.details&&r.details>=r.submitted&&r.submitted>=r.paid&&r.paid>=r.refunded);
+console.log('All numerical and data-consistency checks passed.');
